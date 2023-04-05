@@ -1,11 +1,19 @@
-node {
-  stage('Estágio 1'){
-    echo 'Estágio 1'
+agent any
+
+stages {
+  stage('Checkout Github') {
+    steps {
+      git url: 'https://github.com/gustavokennedy/jenkins.git', branch: 'main' 
+    }
   }
-  stage('Estágio 2'){
-    echo 'Estágio 2'
+  stage('Criação/Atualização Infraestrutura'){
+    environment {
+    }
+    steps{
+      script {
+        dir('src') {
+          sh 'ls'
+        }
+      }
+    }
   }
-    stage('Estágio 3'){
-    echo 'Estágio 3'
-  }
-}
