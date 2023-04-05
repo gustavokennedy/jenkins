@@ -1,4 +1,2 @@
-# jenkins
-Repositório para estudo do Jenkins
-
-Emular ambiente para CICD
+# Jenkins
+Repositório para estudo do Jenkins utilizando aplicação teste ReactJS e NodeJS.
