@@ -1,7 +1,14 @@
 pipeline {
  agent any 
+ 
     stages {
-        stage('Build') {
+     
+      stage ('Preparando') {
+        git branch: 'main', url: 'https://github.com/gustavokennedy/jenkins.git'
+        sh 'npm install'
+      }
+     
+        stage('Teste') {
             steps {
                 sh 'ls'
             }
@@ -11,5 +18,8 @@ pipeline {
                 sh 'node --version'
             }
         }
+     
+   
+     
     }
 }
