@@ -3,11 +3,6 @@ pipeline {
  
     stages {
      
-      stage ('Preparando') {
-        git branch: 'main', url: 'https://github.com/gustavokennedy/jenkins.git'
-        sh 'npm install'
-      }
-     
         stage('Teste') {
             steps {
                 sh 'ls'
@@ -17,6 +12,7 @@ pipeline {
             steps {
                 sh 'node --version'
             }
+        
          steps {
     sshagent(credentials: ['90173669-204f-456a-ab02-d1d9c81a784c']) {
       sh '''
