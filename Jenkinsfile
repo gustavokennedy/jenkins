@@ -9,16 +9,11 @@ stages {
   }
   
   stage('Criação/Atualização Infraestrutura'){
-    environment {
-    }
-    
     steps{
       script {
-        
         dir('src') {
           sh 'ls'
         }
-        
       }
     }
     
