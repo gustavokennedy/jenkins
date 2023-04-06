@@ -9,6 +9,7 @@ agent any
      agent { docker { image 'node' } }
             steps {
                 sh 'node --version'
+                sh 'whoami && hostname'
             }
         }
      
@@ -23,6 +24,7 @@ agent any
        steps{
             sshagent(credentials:['90173669-204f-456a-ab02-d1d9c81a784c']){
                sh 'ssh  -o StrictHostKeyChecking=no  ubuntu@18.215.143.84 uptime "whoami"'
+               sh 'whoami && hostname'
           }
         echo "Logado com sucesso!"
        }
