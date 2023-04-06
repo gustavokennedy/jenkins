@@ -11,19 +11,16 @@ agent any
             
      steps {
                 sh 'node --version'
-                args '-p 3000:3000'
             }
      
         }
    
-
         stage('Build') {
             steps {
                 sh 'npm install'
             }
         }
    
-  
      // Logando no servidor destino
      // Credencial criada em Gerenciar Jenkins > Manage Credentials
      // Fonte: https://blog.devgenius.io/how-i-can-make-ssh-from-server-to-jenkins-8dcc34647c6b
@@ -31,7 +28,7 @@ agent any
      // Com Webhook configurado no repositório e habilitado opção "Github hook trigger for GITScm Polling" no Build Triggers qualquer commit envia para Jenkins
 
 //     stage('Logando'){
-         
+//         
 //       steps{
 //            sshagent(credentials:['90173669-204f-456a-ab02-d1d9c81a784c']){
 //               sh 'ssh  -o StrictHostKeyChecking=no  ubuntu@18.215.143.84 uptime "whoami"'
@@ -39,7 +36,7 @@ agent any
 //          }
 //        echo "Logado com sucesso!"
 //       }
-       
+//       
 //     }
    
 
