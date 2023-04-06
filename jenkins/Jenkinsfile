@@ -6,6 +6,7 @@ pipeline {
      // Logando no servidor destino
      // Credencial criada em Gerenciar Jenkins > Manage Credentials
      // Fonte: https://blog.devgenius.io/how-i-can-make-ssh-from-server-to-jenkins-8dcc34647c6b
+     // Webhook https://pipeline.**/github-webhook/
         stage('Logando'){
          steps{
             sshagent(credentials:['90173669-204f-456a-ab02-d1d9c81a784c']){
