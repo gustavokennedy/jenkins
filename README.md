@@ -26,4 +26,4 @@ Habilitar a função:
 
 Override Hook URL - Specify another hook URL for GitHub configuration
 
-<b>Obs:</b> dentro do repositório vá em Settings > Webhhoks e informe a URL do passo anterior (Override Hook URL).
+<b>Obs:</b> dentro do repositório GitHub vá em Settings > Webhhoks e informe a URL do passo anterior (Override Hook URL).
