@@ -20,6 +20,38 @@ pipeline {
        
      }
    
+     
+     
+     // Processo de Building
+     stage('Build') {
+            steps {
+                echo "Buildado!"  
+            }
+        }
+     
+     
+     
+     
+      // Processo de Testing
+      stage('Test') {
+            steps {
+               echo "Testado!"  
+            }
+        }
     
+     
+     // Processo de Deploy
+     stage('Deploy') {
+            when {
+              expression {
+                currentBuild.result == null || currentBuild.result == 'SUCCESS' 
+              }
+            }
+            steps {
+                echo "Deployado!"
+            }
+        }
+     
+     
  }
 }
