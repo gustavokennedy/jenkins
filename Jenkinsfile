@@ -14,10 +14,13 @@ agent any
                 args '-p 3000:3000'
             }
      
-     steps {
+        }
+   
+   stages {
+        stage('Build') {
+            steps {
                 sh 'npm install'
             }
-     
         }
   
      // Logando no servidor destino
