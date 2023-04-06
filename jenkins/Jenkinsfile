@@ -5,6 +5,7 @@ agent any
   stages {
    
    // Testando Docker
+   // Inicia agent com Docker e verifica versão Node
     stage('Teste Docker') {
      agent { docker { image 'node' } }
             steps {
