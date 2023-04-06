@@ -13,6 +13,11 @@ agent any
                 sh 'node --version'
                 args '-p 3000:3000'
             }
+     
+     steps {
+                sh 'npm install'
+            }
+     
         }
   
      // Logando no servidor destino
@@ -33,27 +38,7 @@ agent any
        
 //     }
    
-    // Processo de Install
-     stage('Install') {
-            steps {
-                echo "Install!" 
-              sh 'npm install'
-            }
-        }
-     
-     
-     
-     // Processo de Building
-     stage('Build') {
-            steps {
-                echo "Buildado!" 
-              sh 'npm start'
-            }
-        }
-     
-     
-     
-     
+
       // Processo de Testing
       stage('Test') {
             steps {
