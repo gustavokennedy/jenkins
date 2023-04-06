@@ -14,21 +14,7 @@ agent any
                 args '-p 7777:7777'
             }
         }
-   
-
-        stage('Build') { 
-            steps {
-                sh 'npm install' 
-            }
-        }
-
-   
-    stage('Deliver') { 
-            steps {
-                sh 'npm run' 
-            }
-        }
-     
+  
      // Logando no servidor destino
      // Credencial criada em Gerenciar Jenkins > Manage Credentials
      // Fonte: https://blog.devgenius.io/how-i-can-make-ssh-from-server-to-jenkins-8dcc34647c6b
