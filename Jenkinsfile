@@ -8,8 +8,24 @@ agent any
    // Inicia agent com Docker e verifica versão Node
     stage('Teste Docker') {
      agent { docker { image 'node' } }
-            steps {
+            
+     steps {
                 sh 'node --version'
+                args '-p 7777:7777'
+            }
+        }
+   
+
+        stage('Build') { 
+            steps {
+                sh 'npm install' 
+            }
+        }
+
+   
+    stage('Deliver') { 
+            steps {
+                sh 'npm run' 
             }
         }
      
