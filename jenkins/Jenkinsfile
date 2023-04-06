@@ -9,7 +9,6 @@ agent any
      agent { docker { image 'node' } }
             steps {
                 sh 'node --version'
-                sh 'whoami && hostname'
             }
         }
      
