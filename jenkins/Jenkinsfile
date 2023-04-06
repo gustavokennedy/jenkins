@@ -4,7 +4,7 @@ agent any
     
   stages {
    
-   
+   // Testando Docker
     stage('Teste Docker') {
      agent { docker { image 'node' } }
             steps {
