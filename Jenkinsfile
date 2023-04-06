@@ -22,6 +22,7 @@ agent any
                 sh 'npm install'
             }
         }
+   }
   
      // Logando no servidor destino
      // Credencial criada em Gerenciar Jenkins > Manage Credentials
