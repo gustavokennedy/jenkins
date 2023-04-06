@@ -6,7 +6,7 @@ agent any
    
    
     stage('Teste Docker') {
-     agent { docker { image 'node:gallium-bullseye-slim' } }
+     agent { docker { image 'node:lts' } }
             steps {
                 sh 'node --version'
             }
