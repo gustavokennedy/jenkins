@@ -20,7 +20,7 @@ agent any
      // Fonte: https://blog.devgenius.io/how-i-can-make-ssh-from-server-to-jenkins-8dcc34647c6b
      // Webhook https://pipeline.**/github-webhook/
      // Com Webhook configurado no repositório e habilitado opção "Github hook trigger for GITScm Polling" no Build Triggers qualquer commit envia para Jenkins
-        
+
      stage('Logando'){
          
        steps{
@@ -33,12 +33,21 @@ agent any
        
      }
    
+    // Processo de Install
+     stage('Install') {
+            steps {
+                echo "Install!" 
+              sh 'npm install'
+            }
+        }
+     
      
      
      // Processo de Building
      stage('Build') {
             steps {
-                echo "Buildado!"  
+                echo "Buildado!" 
+              sh 'npm start'
             }
         }
      
