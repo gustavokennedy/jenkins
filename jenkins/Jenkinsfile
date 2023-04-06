@@ -6,7 +6,7 @@ agent any
    
    
     stage('Teste Docker') {
-     agent { docker { image 'node:lts' } }
+     agent { docker { image 'node' } }
             steps {
                 sh 'node --version'
             }
