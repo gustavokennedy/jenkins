@@ -1,7 +1,16 @@
 pipeline {
- agent any 
  
-    stages {
+ //agent any 
+ agent { docker { image 'node:16.17.1-alpine' } }
+    
+  stages {
+   
+   
+    stage('Teste Docker') {
+            steps {
+                sh 'node --version'
+            }
+        }
      
      // Logando no servidor destino
      // Credencial criada em Gerenciar Jenkins > Manage Credentials
